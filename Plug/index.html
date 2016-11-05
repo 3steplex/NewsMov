@@ -1,109 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title>jQuery Breaking News Plugin Demos</title>
-	
-	<link rel="stylesheet" href="css/breakingNews.css">
-	<style>
-	.feed-title {
-		background: #27ae60;
-		float: left;
-		margin-top: -8px;
-		margin-left: -12px;
-		padding: 8px;
-		margin-right: 12px;
-		color: #fff;
-	}
-    .feed-title-2 {
-		background: #16a085;
-		float: left;
-		margin-top: -8px;
-		margin-left: -12px;
-		padding: 8px;
-		margin-right: 12px;
-		color: #fff;
-	}
-    .feed-title-3 {
-		background: red;
-		float: left;
-		margin-top: -8px;
-		margin-left: -12px;
-		padding: 8px;
-		margin-right: 12px;
-		color: #fff;
-	}
-	</style>
-    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>IDEABOX Elegant Forms</title>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/breakingNews.css"/>
+
+<script src="js/jQuery.js"></script>
+<script src="js/breakingNews.js"></script>
 </head>
+
+<style>
+	body{padding:0; margin:0; font-family:'PT Sans'; font-size:16px; background:url(trash/pattern.png);}
+	header{width:100%; padding:50px 0; text-align:center; color:#FFF;}
+	header h1{ font-size:48px;}
+	header a{color:#FFF; text-decoration:none; display:inline-block; padding:5px 10px; border:solid 1px #FFF;}
+	header a:hover{border-color:#c30;}
+	header a.active{background:#FFF; color:#333;}
+</style>
 <body>
-<div id="jquery-script-menu">
-<div class="jquery-script-center">
-<ul>
-<li><a href="http://www.jqueryscript.net/rotator/jQuery-Plugin-For-Simple-News-Feed-Ticker-Breaking-News.html">Download This Plugin</a></li>
-<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
-</ul>
+<header>
+	<h1>Breaking News Ticker</h1>
+    <h3>Jquery Plugin</h3>
+    <a href="index.html">HTML Data Example</a>
+    <a class="active" href="rss.html">RSS Data Example</a>
+</header>
+
+
+<div style="width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
+
+	<div class="breakingNews" id="bn1">
+    	<div class="bn-title"><h2>Correio da Manhã</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
 
 </div>
-<div class="jquery-script-clear"></div>
-</div>
-</div>
-<h1 style="margin-top:150px;">jQuery Breaking News Plugin Demos</h1>
-<div class="feed"></div><br>
-<br>
 
-<div class="feed-2"></div><br>
-<br>
-<div class="feed-3"></div>
-
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="js/jquery.breakingNews.min.js"></script>
 <script>
-	$('.feed').breakingNews({
-		url: 'http://feeds.feedburner.com/jquery-script',
-		feedSize: {
-			height: '20px',
-			width: '920px'
-		},
-		numberToShow: 5,
-		refresh: 2000,
-		effect: 'tricker',
-		effectDuration: 50,
-		onComplete: function() {
-			$(this).prepend('<div class="feed-title" />');
-			$('.feed-title').html(arguments[0].responseData.feed.title);
-		}
-	});
-		$('.feed-2').breakingNews({
-		url: 'http://developer.apple.com/news/rss/news.rss',
-		feedSize: {
-			height: '20px',
-			width: '920px'
-		},
-		numberToShow: 5,
-		refresh: 2000,
-		effect: 'tricker',
-		effectDuration: 50,
-		onComplete: function() {
-			$(this).prepend('<div class="feed-title-2" />');
-			$('.feed-title-2').html(arguments[0].responseData.feed.title);
-		}
-	});
-	
-	$('.feed-3').breakingNews({
-		url: 'http://feeds.bbci.co.uk/news/world/rss.xml',
-		feedSize: {
-			height: '20px',
-			width: '920px'
-		},
-		numberToShow: 5,
-		refresh: 2000,
-		effect: 'tricker',
-		effectDuration: 50,
-		onComplete: function() {
-			$(this).prepend('<div class="feed-title-3" />');
-			$('.feed-title-3').html(arguments[0].responseData.feed.title);
-		}
-	});
+	$(window).load(function(e) {
+        $("#bn1").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:3000,
+			color		:"green",
+			feed		:"http://www.cmjornal.pt/rss",
+			feedlabels	:"Correio da manha",
+			feedcount	:3	
+		});
+    });
 </script>
 
 </body>
