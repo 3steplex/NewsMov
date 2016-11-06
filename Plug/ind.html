@@ -29,21 +29,148 @@
             <span></span>
         </div>
     </div>
+	
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn2">
+    	<div class="bn-title"><h2>PÚblico</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
 
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn3">
+    	<div class="bn-title"><h2>Expresso</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+	
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn4">
+    	<div class="bn-title"><h2>Observador</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn5">
+    	<div class="bn-title"><h2>Sic Notícias</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+	
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn6">
+    	<div class="bn-title"><h2>Jornal de Notícias</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+	
 </div>
 
 <script>
 	$(window).load(function(e) {
         $("#bn1").breakingNews({
-			effect		:"slide-v",
+			effect		:"slide-h",
 			autoplay	:true,
 			timer		:2500,
-			color		:"yellow",
+			color		:"darkred",
 			feed		:"http://www.cmjornal.pt/rss",
-			feedlabels	:"Correio da manha",
+			feedlabels	:"Correio da manhã",
 			feedcount	:15	
 		});
     });
+	
+	$(window).load(function(e) {
+        $("#bn2").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2300,
+			color		:"darkred",
+			feed		:"http://feeds.feedburner.com/PublicoRSS",
+			feedlabels	:"Público",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn3").breakingNews({
+			effect		:"slide-v",
+			autoplay	:true,
+			timer		:2500,
+			color		:"turquoise",
+			feed		:"http://feeds.feedburner.com/expresso-geral",
+			feedlabels	:"Expresso",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn4").breakingNews({
+			effect		:"slide-v",
+			autoplay	:true,
+			timer		:2300,
+			color		:"turquoise",
+			feed		:"http://feeds.feedburner.com/obs-ultimas",
+			feedlabels	:"Observador",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn5").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2600,
+			color		:"red",
+			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas",
+			feedlabels	:"Sic Notícias",
+			feedcount	:15	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn6").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2200,
+			color		:"light",
+			feed		:"http://feeds.jn.pt/JN-Ultimas",
+			feedlabels	:"Jornal de Notícias",
+			feedcount	:15	
+		});
+    });
+	
 </script>
 <!-- colors select - "red", "green", "yellow", "turquoise", "orange", "purple", "darkred", "black", "light","pink" -->
 <!-- size banner - Small("bn-small") - Big("bn-large") -->
