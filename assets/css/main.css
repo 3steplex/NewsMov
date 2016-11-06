@@ -661,8 +661,8 @@
 				}
 
 					#header nav a:active:before {
-						background-color: rgba(255, 255, 255, 0.35);
-						color: #fff;
+						background-color: rgba(160, 224, 247 0.35);
+						color: #a0e0f7;
 					}
 
 				#header nav a span {
