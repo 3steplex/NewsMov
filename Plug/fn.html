@@ -19,10 +19,8 @@
 
 <div style=" width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
 
-	<div class="breakingNews" id="bn1 bn2 bn3">
-        <div class="bn-title" id="bn1"><h2>Correio da Manhã</h2><span></span></div>
-        <div class="bn-title" id="bn2"><h2>Público</h2><span></span></div>
-        <div class="bn-title" id="bn3"><h2>Expresso</h2><span></span></div>
+	<div class="breakingNews" id="bn1">
+        <div class="bn-title" id="bn1"><h2>Jornais</h2><span></span></div>
         <ul>
         	
         </ul>
@@ -39,10 +37,10 @@
         $("#bn1").breakingNews({
 			effect		:"slide-h",
 			autoplay	:true,
-			timer		:2000,
+			timer		:2800,
 			color		:"darkred",
-			feed		:"http://www.cmjornal.pt/rss",
-			feedlabels	:"Correio da manhã",
+			feed		:"http://www.cmjornal.pt/rss,http://feeds.feedburner.com/PublicoRSS,http://feeds.feedburner.com/expresso-geral,http://feeds.feedburner.com/obs-ultimas,http://feeds.jn.pt/JN-Ultimas",
+			feedlabels	:"Jornais",
 			feedcount	:15	
 		});
     });
@@ -52,7 +50,7 @@
 			effect		:"slide-h",
 			autoplay	:true,
 			timer		:2200,
-			color		:"darkred",
+			color		:"red",
 			feed		:"http://feeds.feedburner.com/PublicoRSS",
 			feedlabels	:"Público",
 			feedcount	:10	
