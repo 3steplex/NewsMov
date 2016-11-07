@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/breakingNews.css"/>
+
+<script src="js/jQuery.js"></script>
+<script src="js/breakingNews.js"></script>
+</head>
+
+<style>
+	body{padding:0; margin:0; font-family:'PT Sans'; font-size:16px;}
+	header{width:100%; padding:50px 0; text-align:center; color:#FFF;}
+	header h1{ font-size:48px;}
+	
+</style>
+<body>
+
+<div style=" width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
+
+	<div class="breakingNews bn-large" id="bn1">
+        <div class="bn-title" id="bn1"><h2>Jornais</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+    
+<!--
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn2">
+        <div class="bn-title" id="bn1"><h2>TV/Rádio</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+ -->
+<script>
+	$(window).load(function(e) {
+        $("#bn1").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:3000,
+			color		:"turquoise",
+			feed		:"http://www.cmjornal.pt/rss,http://feeds.feedburner.com/PublicoRSS,http://feeds.feedburner.com/expresso-geral,http://feeds.feedburner.com/obs-ultimas,http://feeds.jn.pt/JN-Ultimas,http://www.jornaldenegocios.pt/rss",
+			feedlabels	:"Jornais",
+			feedcount	:5	
+		});
+    });
+<!--	
+	$(window).load(function(e) {
+        $("#bn2").breakingNews({
+			effect		:"slide-v",
+			autoplay	:true,
+			timer		:3200,
+			color		:"light",
+			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas,http://www.rtp.pt/noticias/rss,http://feeds.tsf.pt/TSF-Ultimas,http://rr.sapo.pt/rss/rssfeed.aspx?section=section_noticias",
+			feedlabels	:"TV/Rádio",
+			feedcount	:5	
+		});
+    });
+-->
+	
+</script>
+<!-- colors select - "red", "green", "yellow", "turquoise", "orange", "purple", "darkred", "black", "light","pink" -->
+<!-- size banner - Small("bn-small") - Big("bn-large") -->
+</body>
+</html>
