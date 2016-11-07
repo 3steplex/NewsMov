@@ -19,8 +19,8 @@
 
 <div style=" width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
 
-	<div class="breakingNews" id="bn1">
-    	<div class="bn-title"><h2>Correio da Manhã</h2><span></span></div>
+	<div class="breakingNews bn-large" id="bn1">
+        <div class="bn-title" id="bn1"><h2>Jornais</h2><span></span></div>
         <ul>
         	
         </ul>
@@ -29,12 +29,12 @@
             <span></span>
         </div>
     </div>
-	
+    
 <!-- -->
 <p>&nbsp;</p>
 	
 	<div class="breakingNews" id="bn2">
-    	<div class="bn-title"><h2>Público</h2><span></span></div>
+        <div class="bn-title" id="bn1"><h2>TV/Rádio</h2><span></span></div>
         <ul>
         	
         </ul>
@@ -43,63 +43,6 @@
             <span></span>
         </div>
     </div>
-
-<!-- -->
-<p>&nbsp;</p>
-	
-	<div class="breakingNews" id="bn3">
-    	<div class="bn-title"><h2>Expresso</h2><span></span></div>
-        <ul>
-        	
-        </ul>
-        <div class="bn-navi">
-        	<span></span>
-            <span></span>
-        </div>
-    </div>
-	
-<!-- -->
-<p>&nbsp;</p>
-	
-	<div class="breakingNews" id="bn4">
-    	<div class="bn-title"><h2>Observador</h2><span></span></div>
-        <ul>
-        	
-        </ul>
-        <div class="bn-navi">
-        	<span></span>
-            <span></span>
-        </div>
-    </div>
-
-<!-- -->
-<p>&nbsp;</p>
-	
-	<div class="breakingNews" id="bn5">
-    	<div class="bn-title"><h2>Sic Notícias</h2><span></span></div>
-        <ul>
-        	
-        </ul>
-        <div class="bn-navi">
-        	<span></span>
-            <span></span>
-        </div>
-    </div>
-	
-<!-- -->
-<p>&nbsp;</p>
-	
-	<div class="breakingNews" id="bn6">
-    	<div class="bn-title"><h2>Jornal de Notícias</h2><span></span></div>
-        <ul>
-        	
-        </ul>
-        <div class="bn-navi">
-        	<span></span>
-            <span></span>
-        </div>
-    </div>
-	
 </div>
 
 <script>
@@ -107,69 +50,26 @@
         $("#bn1").breakingNews({
 			effect		:"slide-h",
 			autoplay	:true,
-			timer		:2000,
+			timer		:3000,
 			color		:"darkred",
-			feed		:"http://www.cmjornal.pt/rss",
-			feedlabels	:"Correio da manhã",
-			feedcount	:15	
+			feed		:"http://www.cmjornal.pt/rss,http://feeds.feedburner.com/PublicoRSS,http://feeds.feedburner.com/expresso-geral,http://feeds.feedburner.com/obs-ultimas,http://feeds.jn.pt/JN-Ultimas,http://www.jornaldenegocios.pt/rss",
+			feedlabels	:"Jornais",
+			feedcount	:5	
 		});
     });
 	
 	$(window).load(function(e) {
         $("#bn2").breakingNews({
-			effect		:"slide-h",
+			effect		:"slide-v",
 			autoplay	:true,
-			timer		:2200,
-			color		:"darkred",
-			feed		:"http://feeds.feedburner.com/PublicoRSS",
-			feedlabels	:"Público",
-			feedcount	:10	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn3").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2000,
-			color		:"turquoise",
-			feed		:"http://feeds.feedburner.com/expresso-geral",
-			feedlabels	:"Expresso",
-			feedcount	:10	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn4").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2200,
-			color		:"turquoise",
-			feed		:"http://feeds.feedburner.com/obs-ultimas",
-			feedlabels	:"Observador",
-			feedcount	:10	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn5").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2000,
-			color		:"red",
-			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas",
-			feedlabels	:"Sic Notícias",
-			feedcount	:15	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn6").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2200,
+			timer		:3200,
 			color		:"light",
-			feed		:"http://feeds.jn.pt/JN-Ultimas",
-			feedlabels	:"Jornal de Notícias",
-			feedcount	:15	
+			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas,http://www.rtp.pt/noticias/rss,http://feeds.tsf.pt/TSF-Ultimas,http://rr.sapo.pt/rss/rssfeed.aspx?section=section_noticias",
+			feedlabels	:"TV/Rádio",
+			feedcount	:5	
 		});
     });
+	
 	
 </script>
 <!-- colors select - "red", "green", "yellow", "turquoise", "orange", "purple", "darkred", "black", "light","pink" -->
