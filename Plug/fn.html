@@ -30,6 +30,19 @@
         </div>
     </div>
     
+<!-- -->
+<p>&nbsp;</p>
+	
+	<div class="breakingNews" id="bn2">
+        <div class="bn-title" id="bn1"><h2>Canais TV/Rádio</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -38,68 +51,25 @@
 			effect		:"slide-h",
 			autoplay	:true,
 			timer		:3000,
-			color		:"darkred",
-			feed		:"http://www.cmjornal.pt/rss,http://feeds.feedburner.com/PublicoRSS,http://feeds.feedburner.com/expresso-geral,http://feeds.feedburner.com/obs-ultimas,http://feeds.jn.pt/JN-Ultimas",
+			color		:"red",
+			feed		:"http://www.cmjornal.pt/rss,http://feeds.feedburner.com/PublicoRSS,http://feeds.feedburner.com/expresso-geral,http://feeds.feedburner.com/obs-ultimas,http://feeds.jn.pt/JN-Ultimas,http://www.jornaldenegocios.pt/rss",
 			feedlabels	:"Jornais",
-			feedcount	:4	
+			feedcount	:5	
 		});
     });
 	
 	$(window).load(function(e) {
         $("#bn2").breakingNews({
-			effect		:"slide-h",
+			effect		:"slide-v",
 			autoplay	:true,
-			timer		:2200,
-			color		:"red",
-			feed		:"http://feeds.feedburner.com/PublicoRSS",
-			feedlabels	:"Público",
-			feedcount	:10	
+			timer		:3200,
+			color		:"darkred",
+			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas,http://www.rtp.pt/noticias/rss,http://feeds.tsf.pt/TSF-Ultimas,http://rr.sapo.pt/rss/rssfeed.aspx?section=section_noticias",
+			feedlabels	:"Canais TV/Rádio",
+			feedcount	:5	
 		});
     });
-	$(window).load(function(e) {
-        $("#bn3").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2000,
-			color		:"turquoise",
-			feed		:"http://feeds.feedburner.com/expresso-geral",
-			feedlabels	:"Expresso",
-			feedcount	:10	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn4").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2200,
-			color		:"turquoise",
-			feed		:"http://feeds.feedburner.com/obs-ultimas",
-			feedlabels	:"Observador",
-			feedcount	:10	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn5").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2000,
-			color		:"red",
-			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas",
-			feedlabels	:"Sic Notícias",
-			feedcount	:15	
-		});
-    });
-	$(window).load(function(e) {
-        $("#bn6").breakingNews({
-			effect		:"slide-h",
-			autoplay	:true,
-			timer		:2200,
-			color		:"light",
-			feed		:"http://feeds.jn.pt/JN-Ultimas",
-			feedlabels	:"Jornal de Notícias",
-			feedcount	:15	
-		});
-    });
+	
 	
 </script>
 <!-- colors select - "red", "green", "yellow", "turquoise", "orange", "purple", "darkred", "black", "light","pink" -->
