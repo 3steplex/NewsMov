@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/breakingNews.css"/>
+
+<script src="js/jQuery.js"></script>
+<script src="js/breakingNews.js"></script>
+</head>
+
+<style>
+	body{padding:0; margin:0; font-family:'PT Sans'; font-size:16px;}
+	header{width:100%; padding:50px 0; text-align:center; color:#FFF;}
+	header h1{ font-size:48px;}
+	
+</style>
+<body>
+
+<div style=" width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
+
+	<div class="breakingNews" id="bn1 bn2 bn3">
+        <div class="bn-title" id="bn1"><h2>Correio da Manhã</h2><span></span></div>
+        <div class="bn-title" id="bn2"><h2>Público</h2><span></span></div>
+        <div class="bn-title" id="bn3"><h2>Expresso</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+	$(window).load(function(e) {
+        $("#bn1").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2000,
+			color		:"darkred",
+			feed		:"http://www.cmjornal.pt/rss",
+			feedlabels	:"Correio da manhã",
+			feedcount	:15	
+		});
+    });
+	
+	$(window).load(function(e) {
+        $("#bn2").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2200,
+			color		:"darkred",
+			feed		:"http://feeds.feedburner.com/PublicoRSS",
+			feedlabels	:"Público",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn3").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2000,
+			color		:"turquoise",
+			feed		:"http://feeds.feedburner.com/expresso-geral",
+			feedlabels	:"Expresso",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn4").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2200,
+			color		:"turquoise",
+			feed		:"http://feeds.feedburner.com/obs-ultimas",
+			feedlabels	:"Observador",
+			feedcount	:10	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn5").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2000,
+			color		:"red",
+			feed		:"http://feeds.feedburner.com/sicnoticias-ultimas",
+			feedlabels	:"Sic Notícias",
+			feedcount	:15	
+		});
+    });
+	$(window).load(function(e) {
+        $("#bn6").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:2200,
+			color		:"light",
+			feed		:"http://feeds.jn.pt/JN-Ultimas",
+			feedlabels	:"Jornal de Notícias",
+			feedcount	:15	
+		});
+    });
+	
+</script>
+<!-- colors select - "red", "green", "yellow", "turquoise", "orange", "purple", "darkred", "black", "light","pink" -->
+<!-- size banner - Small("bn-small") - Big("bn-large") -->
+</body>
+</html>
